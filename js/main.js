@@ -32,4 +32,36 @@ logikai operátorok: negálás: !, and -> &&, or -> ||
 A Js gyengén típusos nyelv: ==
 
 */
+console.log("Alma")
+
  
+/* 
+Array (tömb ) ~ Piton lista (dinamikus, heterogén)
+const t = []; Ne: const t = new Array();
+Elemek elérése: t[0], t.at(-1)
+t.slice(start , end) end nélkül nem áll meg a tömb végén csak. (szeletelő) ~[::]
+const newT = t.tospliced(start, deletecount, inserted elements)
+i.indexOf(20) --> az elem indexét adja vissza
+t.toString() --> '10, 20, 30'
+t.join("    ") '102030'
+*/
+
+const pElements = document.querySelectorAll("p")
+pElements[pElements.length-1].style.fontFamily = 'Arial'
+pElements[pElements.length-1].style.color = "hsl(100, 60%, 40%)"
+
+const floatDiv = document.querySelector('.float-div');
+Array.from(pElements).splice(0, 3);
+// Az Array.from() metódus tömböt készít a nodelist-ből. A nodelist nem tömb!
+
+
+floatDiv.innerHTML = "";
+console.log(Array.from(pElements));
+for (let element of Array.from(pElements)){
+    console.log(element.innerHTML)
+    floatDiv.innerHTML += element.innerHTML;
+}
+
+
+
+
